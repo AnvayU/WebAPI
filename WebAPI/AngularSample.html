@@ -1,0 +1,40 @@
+﻿<!DOCTYPEhtml>
+<html ng-app ="AngualrApp">
+
+    <head>
+        <script src ="Scripts/angular.min.js">
+            </script>
+            <script src ="Scripts/Script.js">
+                </script>
+                <title></title>
+                <meta charset ="utf-8" />
+    </head>
+
+    <body>
+        <div ng-controller ="UserController">
+            <table tableborder ="1">
+                <thead>
+                    <tr>
+                        <th>
+                            User Id
+                        </th>
+                        <th>
+                            User Name
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tr ng-repeat ="s in users">
+                    <td>
+                        {{s.UserId}}
+                    </td>
+                    <td>
+                        {{s.UserName}}
+                    </td>
+                  
+                 </tr>
+             </table>
+        </div>
+    </body>
+
+    </html>

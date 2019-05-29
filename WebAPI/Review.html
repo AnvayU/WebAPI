@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html ng-app ="app">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/angular.js">
+    </script>
+       <script src="Scripts/Module.js">
+    </script>
+    <script src="Scripts/Service.js">
+    </script>
+    <script src="Scripts/Script.js">
+    </script>
+
+
+</head>
+<body ng-controller="ReviewController">
+    <table tableorder="1">
+
+        <tr>
+            <td>
+                Product ID:
+            </td>
+            <td>
+                <input type="text" ng-model="productID" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Name:
+            </td>
+            <td>
+                <input type="text" ng-model="productName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Description:
+            </td>
+            <td>
+                <input type="text" ng-model="productDescr" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Rating:
+            </td>
+            <td>
+                <input type="text" ng-model="productRating" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Review:
+            </td>
+            <td>
+                <input type="text" ng-model="productReview" />
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <input type="button" id="save" value="Save" ng-click="save()">
+            </td>
+            <td>
+                <input type="button" id="delete" value="Delete" ng-click="delete()">
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <table tableorder="1">
+        <thead>
+            <tr>
+                <th>
+                    Product Id
+                </th>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Product Description
+                </th>
+                <th>
+                    Product Rating
+                </th>
+                <th>
+                    Product Review
+                </th>
+                
+
+            </tr>
+        </thead>
+        <tr ng-repeat="p in products">
+            <td>
+                {{p.ProductId}}
+            </td>
+            <td>
+                {{p.ProductName}}
+            </td>
+            <td>
+                {{p.ProductDescr}}
+            </td>
+            <td>
+                {{p.ProductRating}}
+            </td>
+            <td>
+                {{p.ProductReview}}
+            </td>
+
+        </tr>
+    </table>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html ng-app="AngularApp">
+
+<head>
+    <script src="Scripts/angular.js">
+    </script>
+    <script src="Scripts/Script.js">
+    </script>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div ng-controller="ProductAPIController">
+        <table tableborder="1">
+            <thead>
+                <tr>
+                    <th>
+                        Product Id
+                    </th>
+                    <th>
+                        Product Name
+                    </th>
+
+                </tr>
+            </thead>
+            <tr ng-repeat="s in products">
+                <td>
+                    {{s.ProductId}}
+                </td>
+                <td>
+                    {{s.ProductName}}
+                </td>
+                <td>
+                    {{s.ProductDescr}}
+                </td>
+                <td>
+                    {{s.ProductRating}}
+                </td>
+                <td>
+                    {{s.ProductReview}}
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>-->
